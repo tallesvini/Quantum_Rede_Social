@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HTnEpaR4TGc+eyH6ZEymgYXNv99aFbRi/oBaVhmIp6CrWluLjbYS3Hn5WviLT2qrtWXtpqgj1lASPMzbqgrxbg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jbaga\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
