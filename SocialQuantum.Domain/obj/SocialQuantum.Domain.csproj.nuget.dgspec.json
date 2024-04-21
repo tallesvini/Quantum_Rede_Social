@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {}
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
         "projectName": "SocialQuantum.Domain",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",

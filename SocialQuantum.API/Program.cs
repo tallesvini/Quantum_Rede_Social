@@ -1,5 +1,4 @@
 using FluentValidation.AspNetCore;
-using MediatR;
 using SocialQuantum.Infra.IoC.Injections;
 
 var builder = WebApplication.CreateBuilder(args);

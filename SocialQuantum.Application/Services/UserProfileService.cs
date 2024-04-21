@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
-using SocialQuantum.Application.Core.UserProfiles.Commands;
-using SocialQuantum.Application.Core.UserProfiles.Queries;
+using SocialQuantum.Application.CQRS.UserProfiles.Commands;
+using SocialQuantum.Application.CQRS.UserProfiles.Queries;
 using SocialQuantum.Application.DTOs;
 using SocialQuantum.Application.Interfaces;
 
@@ -27,7 +27,7 @@ namespace SocialQuantum.Application.Services
 			return _mapper.Map<IEnumerable<UserProfileDTO>>(result);
 		}
 
-		public async Task<UserProfileDTO> GetByIdAsync(Guid id)
+		public async Task<UserProfileDTO> GetByIdAsync(int id)
 		{
 			GetUserProfileByIdQuery userProfileQuery = new GetUserProfileByIdQuery(id);
 			if (userProfileQuery == null) throw new Exception("Entity could not be loaded.");
@@ -42,16 +42,16 @@ namespace SocialQuantum.Application.Services
 			await _mediator.Send(userProfileCreateCommand);
 		}
 
-		public async Task UpdateAsync(Guid id, UserProfilePersistenceDTO user)
+		public async Task UpdateAsync(int id, UserProfilePersistenceDTO user)
 		{
 			user.Id = id;
 			UserProfileUpdateCommand userProfileUpdateCommand = _mapper.Map<UserProfileUpdateCommand>(user);
 			await _mediator.Send(userProfileUpdateCommand);
 		}
 
-		public async Task DeleteAsync(Guid id)
+		public async Task DeleteAsync(int id)
 		{
-			UserProfileDeleteCommand userProfileDeleteCommand = _mapper.Map<UserProfileDeleteCommand>(id);
+			UserProfileDeleteCommand userProfileDeleteCommand = new UserProfileDeleteCommand(id);
 			await _mediator.Send(userProfileDeleteCommand);
 		}
 	}

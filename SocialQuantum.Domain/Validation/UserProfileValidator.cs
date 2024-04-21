@@ -4,7 +4,7 @@ using SocialQuantum.Domain.Validation.Errors;
 
 namespace SocialQuantum.Domain.Validation
 {
-	public class UserProfileValidator : AbstractValidator<UserProfile>
+	public class UserProfileValidator : AbstractValidator<User>
 	{
         public UserProfileValidator()
         {
@@ -26,9 +26,6 @@ namespace SocialQuantum.Domain.Validation
 				.NotEmpty().WithMessage(CreateUserProfileErrors.Required)
 					.NotNull().WithMessage(CreateUserProfileErrors.Required)
 						.MaximumLength(255).WithMessage(CreateUserProfileErrors.MustBeLessThan255);
-
-			RuleFor(x => x.IsActive)
-                .NotNull().WithMessage(CreateUserProfileErrors.Required);
 		}
     }
 }

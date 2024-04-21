@@ -2,8 +2,7 @@
 {
 	public class BaseDTO
 	{
-		public Guid Id { get; set; }
-		public DateTimeOffset CreationDate { get; set; }
-		public DateTimeOffset? LastEditDate { get; set; }
+		public int Id { get; set; }
+		public string Name { get; set; }
 	}
 }

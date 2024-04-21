@@ -21,8 +21,7 @@ namespace SocialQuantum.Infra.IoC.Injections
 			this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddDbContext<AppDbContext>(options =>
-				options.UseNpgsql(configuration.GetConnectionString("DefaultConnectionApi"),
-					npgsqlOptions => npgsqlOptions.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+				options.UseOracle(configuration.GetConnectionString("DefaultConnectionApi")));
 
 			return services;
 		}
@@ -33,7 +32,7 @@ namespace SocialQuantum.Infra.IoC.Injections
 			services.AddMediatR(handles);
 
 			services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
-			
+
 			return services;
 		}
 
@@ -42,13 +41,17 @@ namespace SocialQuantum.Infra.IoC.Injections
 			services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 			services.AddScoped<IUserProfileService, UserProfileService>();
 
+			services.AddScoped<IStatusAccountRepository, StatusAccountRepository>();
+			services.AddScoped<IStatusAccountService, StatusAccountService>();
+
 			return services;
 		}
 
 		public static IServiceCollection AddFluentValidation(this IServiceCollection services)
 		{
 			services.AddFluentValidationAutoValidation();
-			services.AddTransient<IValidator<UserProfile>, UserProfileValidator>();
+			services.AddTransient<IValidator<User>, UserProfileValidator>();
+			services.AddTransient<IValidator<StatusAccount>, StatusAccountValidator>();
 			return services;
 		}
 	}

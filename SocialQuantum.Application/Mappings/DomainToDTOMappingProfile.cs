@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SocialQuantum.Application.DTOs;
+using SocialQuantum.Application.DTOs.StatusAccount;
 using SocialQuantum.Domain.Entities;
 
 namespace SocialQuantum.Application.Mappings
@@ -8,8 +9,11 @@ namespace SocialQuantum.Application.Mappings
 	{
         public DomainToDTOMappingProfile()
         {
-            CreateMap<UserProfile, UserProfileDTO>().ReverseMap();
-            CreateMap<UserProfile, UserProfilePersistenceDTO>().ReverseMap();
+            CreateMap<User, UserProfileDTO>().ReverseMap();
+            CreateMap<User, UserProfilePersistenceDTO>().ReverseMap();
+
+            CreateMap<StatusAccount, StatusAccountDTO>().ReverseMap();
+            CreateMap<StatusAccount, StatusAccountPersistenceDTO>().ReverseMap();
         }
     }
 }

@@ -12,10 +12,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.21.140" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SocialQuantum.Infra.Data\SocialQuantum.Infra.Data.csproj" />
     <ProjectReference Include="..\SocialQuantum.Infra.IoC\SocialQuantum.Infra.IoC.csproj" />
   </ItemGroup>
 

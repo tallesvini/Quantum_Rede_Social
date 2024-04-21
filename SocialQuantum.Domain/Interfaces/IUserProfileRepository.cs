@@ -2,7 +2,5 @@
 
 namespace SocialQuantum.Domain.Interfaces
 {
-	public interface IUserProfileRepository : IAbstractRepository<UserProfile>
-	{
-	}
+	public interface IUserProfileRepository : IAbstractRepository<User> { }
 }

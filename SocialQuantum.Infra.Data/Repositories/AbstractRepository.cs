@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SocialQuantum.Domain.Interfaces;
 
 namespace SocialQuantum.Infra.Data.Repositories
@@ -19,9 +18,9 @@ namespace SocialQuantum.Infra.Data.Repositories
 			return await _dbContext.Set<TEntity>().ToListAsync();
 		}
 
-		public async Task<TEntity> GetByIdAsync(Guid id)
+		public async Task<TEntity> GetByIdAsync(int id)
 		{
-			if(id == Guid.Empty) throw new ArgumentNullException("Id cannot be empty", nameof(id));
+			if(id == 0) throw new ArgumentNullException("Id cannot be empty", nameof(id));
 
 			return await _dbContext.Set<TEntity>().FindAsync(id);
 		}
@@ -43,7 +42,7 @@ namespace SocialQuantum.Infra.Data.Repositories
 			return entity;
 		}
 
-		public async Task<TEntity> DeleteAsync(Guid id)
+		public async Task<TEntity> DeleteAsync(int id)
 		{
 			TEntity entity = await GetByIdAsync(id);
 

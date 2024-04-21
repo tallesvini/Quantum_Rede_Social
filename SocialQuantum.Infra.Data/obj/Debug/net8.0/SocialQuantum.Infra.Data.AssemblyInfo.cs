@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialQuantum.Infra.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ded3dde4844a67246d86d86d6a7bdb0efb6e1fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24d7cf639d712b36bda1cce3121c46c85cbafe94")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialQuantum.Infra.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialQuantum.Infra.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

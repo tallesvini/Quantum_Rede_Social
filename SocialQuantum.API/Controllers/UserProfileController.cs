@@ -5,7 +5,7 @@ using SocialQuantum.Application.Interfaces;
 namespace SocialQuantum.API.Controllers
 {
 	[ApiController]
-	[Route("[controller]")]
+	[Route("api/v1[controller]")]
 	public class UserProfileController : ControllerBase
 	{
 		private readonly IUserProfileService _userProfileService;
@@ -24,8 +24,8 @@ namespace SocialQuantum.API.Controllers
 			return Ok(userProfile);
 		}
 
-		[HttpGet("{id:guid:minlength(1)}")]
-		public async Task<ActionResult<UserProfileDTO>> GetByIdAsync([FromRoute] Guid id)
+		[HttpGet("{id:int:minlength(1)}")]
+		public async Task<ActionResult<UserProfileDTO>> GetByIdAsync([FromRoute] int id)
 		{
 			UserProfileDTO userProfile = await _userProfileService.GetByIdAsync(id);
 			return Ok(userProfile);
@@ -47,8 +47,8 @@ namespace SocialQuantum.API.Controllers
 			}
 		}
 
-		[HttpPut("{id:guid:minlength(1)}")]
-		public async Task<ActionResult<UserProfilePersistenceDTO>> Put([FromRoute] Guid id, UserProfilePersistenceDTO userProfile)
+		[HttpPut("{id:int:minlength(1)}")]
+		public async Task<ActionResult<UserProfilePersistenceDTO>> Put([FromRoute] int id, UserProfilePersistenceDTO userProfile)
 		{
 			try
 			{
@@ -63,12 +63,12 @@ namespace SocialQuantum.API.Controllers
 			}
 		}
 
-		[HttpDelete("{id:guid:minlength(1)}")]
-		public async Task<ActionResult> Delete(Guid id)
+		[HttpDelete("{id:int:minlength(1)}")]
+		public async Task<ActionResult> Delete(int id)
 		{
 			try
 			{
-				if (id == Guid.Empty) return NotFound("The id is invalid.");
+				if (id == 0) return NotFound("The id is invalid.");
 				await _userProfileService.DeleteAsync(id);
 
 				return NoContent();

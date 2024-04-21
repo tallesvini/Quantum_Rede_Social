@@ -5,9 +5,9 @@ namespace SocialQuantum.Application.Interfaces
 	public interface IUserProfileService
 	{
 		Task<IEnumerable<UserProfileDTO>> GetAllAsync();
-		Task<UserProfileDTO> GetByIdAsync(Guid id);
+		Task<UserProfileDTO> GetByIdAsync(int id);
 		Task AddAsync(UserProfilePersistenceDTO user);
-		Task UpdateAsync(Guid id, UserProfilePersistenceDTO user);
-		Task DeleteAsync(Guid id);
+		Task UpdateAsync(int id, UserProfilePersistenceDTO user);
+		Task DeleteAsync(int id);
 	}
 }

@@ -7,7 +7,8 @@ namespace SocialQuantum.Infra.Data.Context
 	{
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        private DbSet<UserProfile> UserProfiles { get; set; }
+        private DbSet<User> UserProfiles { get; set; }
+        private DbSet<StatusAccount> StatusAccounts { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj": {}
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj",
         "projectName": "SocialQuantum.API",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.API\\SocialQuantum.API.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.API\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj"
+              },
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj"
               }
             }
           }
@@ -53,6 +56,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.21.140, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -82,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj",
         "projectName": "SocialQuantum.Application",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +113,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
               }
             }
           }
@@ -151,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
         "projectName": "SocialQuantum.Domain",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -212,14 +219,14 @@
         }
       }
     },
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj",
         "projectName": "SocialQuantum.Infra.Data",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,8 +243,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
               }
             }
           }
@@ -268,9 +275,9 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.21.140, )"
             }
           },
           "imports": [
@@ -293,14 +300,14 @@
         }
       }
     },
-    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj": {
+    "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj",
         "projectName": "SocialQuantum.Infra.IoC",
-        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj",
+        "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj",
         "packagesPath": "C:\\Users\\jbaga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.IoC\\obj\\",
+        "outputPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbaga\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -317,14 +324,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Application\\SocialQuantum.Application.csproj"
               },
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Domain\\SocialQuantum.Domain.csproj"
               },
-              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\QuantumSocial\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj"
+              "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.Data\\SocialQuantum.Infra.Data.csproj"
               }
             }
           }
@@ -346,6 +353,14 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.21.140, )"
             }
           },
           "imports": [
