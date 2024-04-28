@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SocialQuantum.Application.DTOs;
 using SocialQuantum.Application.DTOs.StatusAccount;
+using SocialQuantum.Application.DTOs.Visibility;
 using SocialQuantum.Domain.Entities;
 
 namespace SocialQuantum.Application.Mappings
@@ -14,6 +15,8 @@ namespace SocialQuantum.Application.Mappings
 
             CreateMap<StatusAccount, StatusAccountDTO>().ReverseMap();
             CreateMap<StatusAccount, StatusAccountPersistenceDTO>().ReverseMap();
+
+            CreateMap<Visibility, VisibilityDTO>().ReverseMap();
         }
     }
 }

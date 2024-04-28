@@ -44,6 +44,9 @@ namespace SocialQuantum.Infra.IoC.Injections
 			services.AddScoped<IStatusAccountRepository, StatusAccountRepository>();
 			services.AddScoped<IStatusAccountService, StatusAccountService>();
 
+			services.AddScoped<IVisibilityRepository, VisibilityRepository>();
+			services.AddScoped<IVisibilityService, VisibilityService>();
+
 			return services;
 		}
 

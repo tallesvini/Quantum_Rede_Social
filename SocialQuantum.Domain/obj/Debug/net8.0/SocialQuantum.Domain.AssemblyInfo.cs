@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialQuantum.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24d7cf639d712b36bda1cce3121c46c85cbafe94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cb7c923762aa5fcb73564bd6a2488777355ae97")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialQuantum.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialQuantum.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -51,7 +51,7 @@ namespace SocialQuantum.Infra.Data.Migrations
                     b.ToTable("STATUS_ACCOUNTS", (string)null);
                 });
 
-            modelBuilder.Entity("SocialQuantum.Domain.Entities.UserProfile", b =>
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -116,7 +116,35 @@ namespace SocialQuantum.Infra.Data.Migrations
                     b.ToTable("USERS", (string)null);
                 });
 
-            modelBuilder.Entity("SocialQuantum.Domain.Entities.UserProfile", b =>
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.Visibility", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("VISIBILITY_ID");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("CreationDate")
+                        .HasColumnType("TIMESTAMP(7) WITH TIME ZONE")
+                        .HasColumnName("VISIBILITY_CREATE_DATE");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("NUMBER(1)")
+                        .HasColumnName("IS_ACTIVE");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("NVARCHAR2(255)")
+                        .HasColumnName("NAME");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VISIBILITY", (string)null);
+                });
+
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.User", b =>
                 {
                     b.HasOne("SocialQuantum.Domain.Entities.StatusAccount", "StatusAccount")
                         .WithMany("UserProfiles")
