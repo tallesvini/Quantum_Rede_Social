@@ -18,7 +18,7 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) in
    cd nome-do-repositorio
    ```
 
-3. Abra o arquivo `program.cs` e configure as informações de conexão com o banco de dados Oracle:
+3. Abra o arquivo `appsettings.json` e configure as informações de conexão com o banco de dados Oracle:
 
    ```json
       "ConnectionStrings": {
