@@ -22,7 +22,7 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) in
 
    ```json
       "ConnectionStrings": {
-          "DefaultConnectionApi": ...
+          "DefaultConnectionApi": "..."
       },
    ```
 
