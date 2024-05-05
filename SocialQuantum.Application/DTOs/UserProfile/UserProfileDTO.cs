@@ -1,4 +1,6 @@
-﻿namespace SocialQuantum.Application.DTOs
+﻿using SocialQuantum.Application.DTOs.Follows;
+
+namespace SocialQuantum.Application.DTOs
 {
 	public class UserProfileDTO : BaseDTO
 	{
@@ -8,6 +10,9 @@
 		public string Photo { get; set; }
 		public string Biography { get; set; }
 		public string Location { get; set; }
-		public int StatusAccountId { get; private set; }
+		public int StatusAccountId { get; set; }
+
+		public ICollection<FollowingDTO> Following { get; set; }
+		public ICollection<FollowerDTO> Followers { get; set; }
 	}
 }

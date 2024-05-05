@@ -18,10 +18,13 @@ namespace SocialQuantum.Infra.IoC.Injections
 	public static class DependencyInjectionApi
 	{
 		public static IServiceCollection AddDbConnection(
-			this IServiceCollection services, IConfiguration configuration)
+				this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddDbContext<AppDbContext>(options =>
-				options.UseOracle(configuration.GetConnectionString("DefaultConnectionApi")));
+			{
+				options.UseOracle(configuration.GetConnectionString("DefaultConnectionApi"));
+				options.UseLazyLoadingProxies(); // Ativar carregamento preguiçoso
+			});
 
 			return services;
 		}
@@ -47,6 +50,9 @@ namespace SocialQuantum.Infra.IoC.Injections
 			services.AddScoped<IVisibilityRepository, VisibilityRepository>();
 			services.AddScoped<IVisibilityService, VisibilityService>();
 
+			services.AddScoped<IFollowRepository, FollowRepository>();
+			services.AddScoped<IFollowService, FollowService>();
+
 			return services;
 		}
 
@@ -55,6 +61,7 @@ namespace SocialQuantum.Infra.IoC.Injections
 			services.AddFluentValidationAutoValidation();
 			services.AddTransient<IValidator<User>, UserProfileValidator>();
 			services.AddTransient<IValidator<StatusAccount>, StatusAccountValidator>();
+			services.AddTransient<IValidator<Follow>, FollowValidator>();
 			return services;
 		}
 	}

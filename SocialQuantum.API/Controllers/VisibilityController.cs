@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SocialQuantum.Application.DTOs.Visibility;
 using SocialQuantum.Application.Interfaces;
 
@@ -17,16 +16,16 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<VisibilityDTO>>> GetAsync()
+		public async Task<ActionResult<IEnumerable<VisibilityDTO>>> SearchAllAsync()
 		{
-			IEnumerable<VisibilityDTO> visibilityDto = await _visibilityService.GetVisibilityAsync();
+			IEnumerable<VisibilityDTO> visibilityDto = await _visibilityService.GetAllVisibilityAsync();
 			if (!visibilityDto.Any()) NotFound();
 
 			return Ok(visibilityDto);
 		}
 
 		[HttpGet("{id:int:minlength(1)}")]
-		public async Task<ActionResult<VisibilityDTO>> GetByIdAsync(int id)
+		public async Task<ActionResult<VisibilityDTO>> SearchByIdAsync(int id)
 		{
 			VisibilityDTO visibilityDto = await _visibilityService.GetVisibilityByIdAsync(id);
 			if (visibilityDto == null) NotFound();

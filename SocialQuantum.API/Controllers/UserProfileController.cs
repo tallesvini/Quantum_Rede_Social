@@ -5,7 +5,7 @@ using SocialQuantum.Application.Interfaces;
 namespace SocialQuantum.API.Controllers
 {
 	[ApiController]
-	[Route("api/v1[controller]")]
+	[Route("api/v1/[controller]")]
 	public class UserProfileController : ControllerBase
 	{
 		private readonly IUserProfileService _userProfileService;
@@ -16,28 +16,28 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<UserProfileDTO>>> GetAsync()
+		public async Task<ActionResult<IEnumerable<UserProfileDTO>>> SearchAllAsync()
 		{
-			IEnumerable<UserProfileDTO> userProfile = await _userProfileService.GetAllAsync();
+			IEnumerable<UserProfileDTO> userProfile = await _userProfileService.GetAllUsersAsync();
 			if (!userProfile.Any()) return NotFound();
 
 			return Ok(userProfile);
 		}
 
 		[HttpGet("{id:int:minlength(1)}")]
-		public async Task<ActionResult<UserProfileDTO>> GetByIdAsync([FromRoute] int id)
+		public async Task<ActionResult<UserProfileDTO>> SearchByIdAsync([FromRoute] int id)
 		{
-			UserProfileDTO userProfile = await _userProfileService.GetByIdAsync(id);
+			UserProfileDTO userProfile = await _userProfileService.GetUserByIdAsync(id);
 			return Ok(userProfile);
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<UserProfilePersistenceDTO>> PostAsync(UserProfilePersistenceDTO userProfile)
+		public async Task<ActionResult<UserProfilePersistenceDTO>> CreateAsync(UserProfilePersistenceDTO userProfile)
 		{
 			try
 			{
 				if (userProfile == null) return BadRequest("The entity is invalid.");
-				await _userProfileService.AddAsync(userProfile);
+				await _userProfileService.CreateUserAsync(userProfile);
 
 				return Created();
 			}
@@ -48,12 +48,12 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpPut("{id:int:minlength(1)}")]
-		public async Task<ActionResult<UserProfilePersistenceDTO>> Put([FromRoute] int id, UserProfilePersistenceDTO userProfile)
+		public async Task<ActionResult<UserProfilePersistenceDTO>> UpdateAsync([FromRoute] int id, UserProfilePersistenceDTO userProfile)
 		{
 			try
 			{
 				if (userProfile == null) return NotFound("The entity is invalid.");
-				await _userProfileService.UpdateAsync(id, userProfile);
+				await _userProfileService.UpdateUserAsync(id, userProfile);
 
 				return Ok();
 			}
@@ -64,12 +64,12 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpDelete("{id:int:minlength(1)}")]
-		public async Task<ActionResult> Delete(int id)
+		public async Task<ActionResult> DeleteAsync(int id)
 		{
 			try
 			{
 				if (id == 0) return NotFound("The id is invalid.");
-				await _userProfileService.DeleteAsync(id);
+				await _userProfileService.DeleteUserAsync(id);
 
 				return NoContent();
 			}

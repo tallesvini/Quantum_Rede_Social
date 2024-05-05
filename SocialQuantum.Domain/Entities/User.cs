@@ -13,6 +13,9 @@ namespace SocialQuantum.Domain.Entities
         public string Location { get; private set; }
 
         public int StatusAccountId { get; private set; }
-        public StatusAccount StatusAccount { get; private set; }
+        public virtual StatusAccount StatusAccount { get; private set; }
+
+        public virtual ICollection<Follow> Following { get; private set; }
+        public virtual ICollection<Follow> Followers { get; private set; }
 	}
 }

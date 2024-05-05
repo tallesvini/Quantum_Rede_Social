@@ -18,7 +18,7 @@ namespace SocialQuantum.Application.Services
 			_mapper = mapper;
 		}
 
-		public async Task<IEnumerable<UserProfileDTO>> GetAllAsync()
+		public async Task<IEnumerable<UserProfileDTO>> GetAllUsersAsync()
 		{
 			GetUserProfileQuery userProfileQuery = new GetUserProfileQuery();
 			if (userProfileQuery == null) throw new Exception("Entity could not be loaded.");
@@ -27,7 +27,7 @@ namespace SocialQuantum.Application.Services
 			return _mapper.Map<IEnumerable<UserProfileDTO>>(result);
 		}
 
-		public async Task<UserProfileDTO> GetByIdAsync(int id)
+		public async Task<UserProfileDTO> GetUserByIdAsync(int id)
 		{
 			GetUserProfileByIdQuery userProfileQuery = new GetUserProfileByIdQuery(id);
 			if (userProfileQuery == null) throw new Exception("Entity could not be loaded.");
@@ -36,20 +36,20 @@ namespace SocialQuantum.Application.Services
 			return _mapper.Map<UserProfileDTO>(result);
 		}
 
-		public async Task AddAsync(UserProfilePersistenceDTO user)
+		public async Task CreateUserAsync(UserProfilePersistenceDTO user)
 		{
 			UserProfileCreateCommand userProfileCreateCommand = _mapper.Map<UserProfileCreateCommand>(user);
 			await _mediator.Send(userProfileCreateCommand);
 		}
 
-		public async Task UpdateAsync(int id, UserProfilePersistenceDTO user)
+		public async Task UpdateUserAsync(int id, UserProfilePersistenceDTO user)
 		{
 			user.Id = id;
 			UserProfileUpdateCommand userProfileUpdateCommand = _mapper.Map<UserProfileUpdateCommand>(user);
 			await _mediator.Send(userProfileUpdateCommand);
 		}
 
-		public async Task DeleteAsync(int id)
+		public async Task DeleteUserAsync(int id)
 		{
 			UserProfileDeleteCommand userProfileDeleteCommand = new UserProfileDeleteCommand(id);
 			await _mediator.Send(userProfileDeleteCommand);

@@ -17,7 +17,7 @@ namespace SocialQuantum.Application.Services
 			_mapper = mapper;
 		}
 
-		public async Task<IEnumerable<VisibilityDTO>> GetVisibilityAsync()
+		public async Task<IEnumerable<VisibilityDTO>> GetAllVisibilityAsync()
 		{
 			GetVisibilityQuery visibilityQuery = new GetVisibilityQuery();
 			if (visibilityQuery == null) throw new Exception("Entity could not be loaded.");

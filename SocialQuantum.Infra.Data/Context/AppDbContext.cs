@@ -10,6 +10,7 @@ namespace SocialQuantum.Infra.Data.Context
         private DbSet<User> UserProfiles { get; set; }
         private DbSet<StatusAccount> StatusAccounts { get; set; }
         private DbSet<Visibility> Visibilities { get; set; }
+        private DbSet<Follow> Follows { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

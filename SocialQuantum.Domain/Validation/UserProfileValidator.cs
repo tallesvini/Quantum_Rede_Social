@@ -9,23 +9,23 @@ namespace SocialQuantum.Domain.Validation
         public UserProfileValidator()
         {
             RuleFor(user => user)
-                .NotEmpty().WithMessage(CreateUserProfileErrors.Required)
-                    .NotNull().WithMessage(CreateUserProfileErrors.Required);
+                .NotEmpty().WithMessage(GenericErrors.Required)
+                    .NotNull().WithMessage(GenericErrors.Required);
 
 			RuleFor(x => x.UserName)
-				.NotEmpty().WithMessage(CreateUserProfileErrors.Required)
-					.NotNull().WithMessage(CreateUserProfileErrors.Required)
-						.MaximumLength(255).WithMessage(CreateUserProfileErrors.MustBeLessThan255);
+				.NotEmpty().WithMessage(GenericErrors.Required)
+					.NotNull().WithMessage(GenericErrors.Required)
+						.MaximumLength(255).WithMessage(GenericErrors.MustBeLessThan255);
 
 
 			RuleFor(x => x.Photo)
-                .NotEmpty().WithMessage(CreateUserProfileErrors.Required)
-                    .NotNull().WithMessage(CreateUserProfileErrors.Required);
+                .NotEmpty().WithMessage(GenericErrors.Required)
+                    .NotNull().WithMessage(GenericErrors.Required);
 
 			RuleFor(x => x.Biography)
-				.NotEmpty().WithMessage(CreateUserProfileErrors.Required)
-					.NotNull().WithMessage(CreateUserProfileErrors.Required)
-						.MaximumLength(255).WithMessage(CreateUserProfileErrors.MustBeLessThan255);
+				.NotEmpty().WithMessage(GenericErrors.Required)
+					.NotNull().WithMessage(GenericErrors.Required)
+						.MaximumLength(255).WithMessage(GenericErrors.MustBeLessThan255);
 		}
     }
 }

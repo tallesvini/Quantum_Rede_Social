@@ -515,3 +515,5 @@ C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQ
 C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQuantum.API\obj\Debug\net8.0\SocialQuantum.API.csproj.CopyComplete
 C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQuantum.API\obj\Debug\net8.0\SocialQuantum.API.genruntimeconfig.cache
 C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQuantum.API\obj\Debug\net8.0\ref\SocialQuantum.API.dll
+C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQuantum.API\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\jbaga\OneDrive\Área de Trabalho\Estudos\PROJETOS\QuantumSocial\SocialQuantum.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

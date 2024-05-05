@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using SocialQuantum.Application.CQRS.FollowAccount.Commands;
 using SocialQuantum.Application.CQRS.Status.Commands;
 using SocialQuantum.Application.CQRS.UserProfiles.Commands;
 using SocialQuantum.Application.DTOs;
+using SocialQuantum.Application.DTOs.Follows;
 using SocialQuantum.Application.DTOs.StatusAccount;
 
 namespace SocialQuantum.Application.Mappings
@@ -15,6 +17,8 @@ namespace SocialQuantum.Application.Mappings
 
 			CreateMap<StatusAccountPersistenceDTO, StatusAccountCreateCommand>();
 			CreateMap<StatusAccountPersistenceDTO, StatusAccountUpdateCommand>();
+
+			CreateMap<FollowPersistenceDTO, FollowCreateCommand>();
 		}
     }
 }

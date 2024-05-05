@@ -4,10 +4,10 @@ namespace SocialQuantum.Application.Interfaces
 {
 	public interface IStatusAccountService
 	{
-		Task<IEnumerable<StatusAccountDTO>> GetAllAsync();
-		Task<StatusAccountDTO> GetByIdAsync(int id);
-		Task AddAsync(StatusAccountPersistenceDTO user);
-		Task UpdateAsync(int id, StatusAccountPersistenceDTO user);
-		Task DeleteAsync(int id);
+		Task<IEnumerable<StatusAccountDTO>> GetAllStatusAsync();
+		Task<StatusAccountDTO> GetStatusByIdAsync(int id);
+		Task CreateStatusAsync(StatusAccountPersistenceDTO user);
+		Task UpdateStatusAsync(int id, StatusAccountPersistenceDTO user);
+		Task DeleteStatusAsync(int id);
 	}
 }

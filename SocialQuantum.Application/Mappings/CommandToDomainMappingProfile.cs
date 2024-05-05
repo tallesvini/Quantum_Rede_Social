@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SocialQuantum.Application.CQRS.FollowAccount.Commands;
 using SocialQuantum.Application.CQRS.Status.Commands;
 using SocialQuantum.Application.CQRS.UserProfiles.Commands;
 using SocialQuantum.Domain.Entities;
@@ -14,6 +15,8 @@ namespace SocialQuantum.Application.Mappings
 
 			CreateMap<StatusAccountCreateCommand, StatusAccount>().ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => DateTimeOffset.UtcNow));
 			CreateMap<StatusAccountUpdateCommand, StatusAccount>();
+
+			CreateMap<FollowCreateCommand, Follow>().ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => DateTimeOffset.UtcNow));
 		}
     }
 }

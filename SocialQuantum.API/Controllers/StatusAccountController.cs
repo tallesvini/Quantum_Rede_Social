@@ -16,28 +16,28 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<StatusAccountDTO>>> GetAsync()
+		public async Task<ActionResult<IEnumerable<StatusAccountDTO>>> SearchAllAsync()
 		{
-			IEnumerable<StatusAccountDTO> statusAccount = await _statusAccountService.GetAllAsync();
+			IEnumerable<StatusAccountDTO> statusAccount = await _statusAccountService.GetAllStatusAsync();
 			if (!statusAccount.Any()) return NotFound();
 
 			return Ok(statusAccount);
 		}
 
 		[HttpGet("{id:int:minlength(1)}")]
-		public async Task<ActionResult<StatusAccountDTO>> GetByIdAsync([FromRoute] int id)
+		public async Task<ActionResult<StatusAccountDTO>> SearchByIdAsync([FromRoute] int id)
 		{
-			StatusAccountDTO statusAccount = await _statusAccountService.GetByIdAsync(id);
+			StatusAccountDTO statusAccount = await _statusAccountService.GetStatusByIdAsync(id);
 			return Ok(statusAccount);
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<StatusAccountPersistenceDTO>> PostStatusAccount(StatusAccountPersistenceDTO statusAccount)
+		public async Task<ActionResult<StatusAccountPersistenceDTO>> CreateAsync(StatusAccountPersistenceDTO statusAccount)
 		{
 			try
 			{
 				if (statusAccount == null) return BadRequest("The entity is invalid.");
-				await _statusAccountService.AddAsync(statusAccount);
+				await _statusAccountService.CreateStatusAsync(statusAccount);
 
 				return Created();
 			}
@@ -48,12 +48,12 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpPut("{id:int:minlength(1)}")]
-		public async Task<ActionResult<StatusAccountPersistenceDTO>> Put([FromRoute] int id, StatusAccountPersistenceDTO statusAccount)
+		public async Task<ActionResult<StatusAccountPersistenceDTO>> UpdateAsync([FromRoute] int id, StatusAccountPersistenceDTO statusAccount)
 		{
 			try
 			{
 				if (statusAccount == null) return NotFound("The entity is invalid.");
-				await _statusAccountService.UpdateAsync(id, statusAccount);
+				await _statusAccountService.UpdateStatusAsync(id, statusAccount);
 
 				return Ok();
 			}
@@ -64,12 +64,12 @@ namespace SocialQuantum.API.Controllers
 		}
 
 		[HttpDelete("{id:int:minlength(1)}")]
-		public async Task<ActionResult> Delete(int id)
+		public async Task<ActionResult> DeleteAsync(int id)
 		{
 			try
 			{
 				if (id == 0) return NotFound("The id is invalid.");
-				await _statusAccountService.DeleteAsync(id);
+				await _statusAccountService.DeleteStatusAsync(id);
 
 				return NoContent();
 			}

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uA/plECXZ4a5NqhQZMyRTli6CfFxoJqdBCcTenC51gfrdsTuaYRRoGOvnIZgogMSChDRYtCzfe6QpQaH1D1TdA==",
+  "dgSpecHash": "AY3OXhe5ZI98Rg9dtWRvA4n9iY64u3oBUuf7k64kl4YhOG70QAgBoaf+Xty3eRW2LB3xnUXUfmlrbpFHcQ79LA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jbaga\\OneDrive\\Área de Trabalho\\Estudos\\PROJETOS\\QuantumSocial\\SocialQuantum.Infra.IoC\\SocialQuantum.Infra.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jbaga\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\jbaga\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
@@ -14,6 +15,7 @@
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.3\\microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.3\\microsoft.entityframeworkcore.abstractions.8.0.3.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.3\\microsoft.entityframeworkcore.analyzers.8.0.3.nupkg.sha512",
+    "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.entityframeworkcore.proxies\\8.0.3\\microsoft.entityframeworkcore.proxies.8.0.3.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.0\\microsoft.entityframeworkcore.relational.8.0.0.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
@@ -28,6 +30,7 @@
     "C:\\Users\\jbaga\\.nuget\\packages\\oracle.entityframeworkcore\\8.21.140\\oracle.entityframeworkcore.8.21.140.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.140\\oracle.manageddataaccess.core.3.21.140.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\jbaga\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\system.directoryservices\\6.0.1\\system.directoryservices.6.0.1.nupkg.sha512",
     "C:\\Users\\jbaga\\.nuget\\packages\\system.directoryservices.protocols\\6.0.2\\system.directoryservices.protocols.6.0.2.nupkg.sha512",

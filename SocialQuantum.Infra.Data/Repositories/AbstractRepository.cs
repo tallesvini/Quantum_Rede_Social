@@ -13,19 +13,19 @@ namespace SocialQuantum.Infra.Data.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
 		{
 			return await _dbContext.Set<TEntity>().ToListAsync();
 		}
 
-		public async Task<TEntity> GetByIdAsync(int id)
+		public virtual async Task<TEntity> GetByIdAsync(int id)
 		{
 			if(id == 0) throw new ArgumentNullException("Id cannot be empty", nameof(id));
 
 			return await _dbContext.Set<TEntity>().FindAsync(id);
 		}
 
-		public async Task<TEntity> CreateAsync(TEntity entity)
+		public virtual async Task<TEntity> CreateAsync(TEntity entity)
 		{
 			if(entity == null) throw new ArgumentNullException(nameof(entity));
 
@@ -33,7 +33,7 @@ namespace SocialQuantum.Infra.Data.Repositories
 			await _dbContext.SaveChangesAsync();
 			return entity;
 		}
-		public async Task<TEntity> UpdateAsync(TEntity entity)
+		public virtual async Task<TEntity> UpdateAsync(TEntity entity)
 		{
 			if (entity == null) throw new ArgumentNullException(nameof(entity));
 
@@ -42,7 +42,7 @@ namespace SocialQuantum.Infra.Data.Repositories
 			return entity;
 		}
 
-		public async Task<TEntity> DeleteAsync(int id)
+		public virtual async Task<TEntity> DeleteAsync(int id)
 		{
 			TEntity entity = await GetByIdAsync(id);
 

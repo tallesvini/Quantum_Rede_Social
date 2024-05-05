@@ -9,12 +9,12 @@ namespace SocialQuantum.Domain.Validation
         public StatusAccountValidator()
         {
 			RuleFor(status => status)
-				.NotEmpty().WithMessage(CreateStatusAccountErrors.Required)
-					.NotNull().WithMessage(CreateStatusAccountErrors.Required);
+				.NotEmpty().WithMessage(GenericErrors.Required)
+					.NotNull().WithMessage(GenericErrors.Required);
 
 			RuleFor(x => x.Name)
-				.NotEmpty().WithMessage(CreateStatusAccountErrors.Required)
-					.NotNull().WithMessage(CreateStatusAccountErrors.Required);
+				.NotEmpty().WithMessage(GenericErrors.Required)
+					.NotNull().WithMessage(GenericErrors.Required);
 		}
     }
 }

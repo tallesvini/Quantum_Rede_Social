@@ -17,10 +17,43 @@ namespace SocialQuantum.Infra.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.3")
+                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.Follow", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("FOLLOWERS_ID");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("CreationDate")
+                        .HasColumnType("TIMESTAMP(7) WITH TIME ZONE")
+                        .HasColumnName("FOLLOWER_CREATE_DATE");
+
+                    b.Property<int>("UserFollowerId")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("USER_FOLLOWER_ID");
+
+                    b.Property<int>("UserFollowingId")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("USER_FOLLOWING_ID");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserFollowerId");
+
+                    b.HasIndex("UserFollowingId");
+
+                    b.ToTable("FOLLOWS", (string)null);
+                });
 
             modelBuilder.Entity("SocialQuantum.Domain.Entities.StatusAccount", b =>
                 {
@@ -144,6 +177,25 @@ namespace SocialQuantum.Infra.Data.Migrations
                     b.ToTable("VISIBILITY", (string)null);
                 });
 
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.Follow", b =>
+                {
+                    b.HasOne("SocialQuantum.Domain.Entities.User", "UserFollower")
+                        .WithMany("Following")
+                        .HasForeignKey("UserFollowerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SocialQuantum.Domain.Entities.User", "UserFollowing")
+                        .WithMany("Followers")
+                        .HasForeignKey("UserFollowingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserFollower");
+
+                    b.Navigation("UserFollowing");
+                });
+
             modelBuilder.Entity("SocialQuantum.Domain.Entities.User", b =>
                 {
                     b.HasOne("SocialQuantum.Domain.Entities.StatusAccount", "StatusAccount")
@@ -158,6 +210,13 @@ namespace SocialQuantum.Infra.Data.Migrations
             modelBuilder.Entity("SocialQuantum.Domain.Entities.StatusAccount", b =>
                 {
                     b.Navigation("UserProfiles");
+                });
+
+            modelBuilder.Entity("SocialQuantum.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Followers");
+
+                    b.Navigation("Following");
                 });
 #pragma warning restore 612, 618
         }

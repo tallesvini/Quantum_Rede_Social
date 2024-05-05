@@ -4,7 +4,7 @@ namespace SocialQuantum.Domain.Interfaces
 {
 	public interface IVisibilityRepository
 	{
-		Task<IEnumerable<Visibility>> GetVisibilityAsync();
+		Task<IEnumerable<Visibility>> GetAllVisibilityAsync();
 		Task<Visibility> GetVisibilityByIdAsync(int id);
 	}
 }

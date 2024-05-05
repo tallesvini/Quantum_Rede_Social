@@ -24,7 +24,7 @@ namespace SocialQuantum.Infra.Data.Configuration
 
 			builder.HasOne<StatusAccount>(x => x.StatusAccount)
 				.WithMany(y => y.UserProfiles)
-				.HasForeignKey(j => j.StatusAccountId);
+					.HasForeignKey(j => j.StatusAccountId);
 		}
 
 	}

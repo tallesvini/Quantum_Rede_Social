@@ -18,7 +18,7 @@ namespace SocialQuantum.Application.Services
 			_mapper = mapper;
 		}
 
-		public async Task<IEnumerable<StatusAccountDTO>> GetAllAsync()
+		public async Task<IEnumerable<StatusAccountDTO>> GetAllStatusAsync()
 		{
 			GetStatusAccountQuery statusAccountQuery = new GetStatusAccountQuery();
 			if (statusAccountQuery == null) throw new Exception("Entity could not be loaded.");
@@ -27,7 +27,7 @@ namespace SocialQuantum.Application.Services
 			return _mapper.Map<IEnumerable<StatusAccountDTO>>(result);
 		}
 
-		public async Task<StatusAccountDTO> GetByIdAsync(int id)
+		public async Task<StatusAccountDTO> GetStatusByIdAsync(int id)
 		{
 			GetStatusAccountByIdQuery statusAccountQuery = new GetStatusAccountByIdQuery(id);
 			if (statusAccountQuery == null) throw new Exception("Entity could not be loaded.");
@@ -36,20 +36,20 @@ namespace SocialQuantum.Application.Services
 			return _mapper.Map<StatusAccountDTO>(result);
 		}
 
-		public async Task AddAsync(StatusAccountPersistenceDTO user)
+		public async Task CreateStatusAsync(StatusAccountPersistenceDTO user)
 		{
 			StatusAccountCreateCommand createCommand = _mapper.Map<StatusAccountCreateCommand>(user);
 			await _mediator.Send(createCommand);
 		}
 
-		public async Task UpdateAsync(int id, StatusAccountPersistenceDTO user)
+		public async Task UpdateStatusAsync(int id, StatusAccountPersistenceDTO user)
 		{
 			user.Id = id;
 			StatusAccountUpdateCommand updateCommand = _mapper.Map<StatusAccountUpdateCommand>(user);
 			await _mediator.Send(updateCommand);
 		}
 
-		public async Task DeleteAsync(int id)
+		public async Task DeleteStatusAsync(int id)
 		{
 			StatusAccountDeleteCommand deleteCommand = new StatusAccountDeleteCommand(id);
 			await _mediator.Send(deleteCommand);

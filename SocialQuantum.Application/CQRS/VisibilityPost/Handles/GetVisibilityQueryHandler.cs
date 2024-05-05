@@ -16,7 +16,7 @@ namespace SocialQuantum.Application.CQRS.VisibilityPost.Handles
 
 		public async Task<IEnumerable<Visibility>> Handle(GetVisibilityQuery request, CancellationToken cancellationToken)
 		{
-			return await _visibilityRepository.GetVisibilityAsync();
+			return await _visibilityRepository.GetAllVisibilityAsync();
 		}
 	}
 }
