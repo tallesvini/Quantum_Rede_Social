@@ -49,14 +49,14 @@ A API estará disponível em `http://localhost:44307`.
 `POST - /api/v1/UserProfile`
 
 2. Consultas de usuários:
-`GET - GetAll - api/v1/UserProfile`
-`GET - GetById - api/v1/UserProfile/{id}`
+`GET - GetAll - /api/v1/UserProfile`
+`GET - GetById - /api/v1/UserProfile/{id}`
 
 3. Atualizar usuário:
-`PUT - api/v1/UserProfile/{id}`
+`PUT - /api/v1/UserProfile/{id}`
 
 4. Delete de usuário:
-`DELETE - api/v1/UserProfile/{id}`
+`DELETE - /api/v1/UserProfile/{id}`
 
 ### STATUS ACCOUNT:
 
@@ -64,14 +64,14 @@ A API estará disponível em `http://localhost:44307`.
 `POST - /api/v1/StatusAccount`
 
 2. Consultas de status:
-`GET - GetAll - api/v1/StatusAccount`
-`GET - GetById - api/v1/StatusAccount/{id}`
+`GET - GetAll - /api/v1/StatusAccount`
+`GET - GetById - /api/v1/StatusAccount/{id}`
 
 3. Atualizar status:
-`PUT - api/v1/StatusAccount/{id}`
+`PUT - /api/v1/StatusAccount/{id}`
 
 4. Delete de status:
-`DELETE - api/v1/StatusAccount/{id}`
+`DELETE - /api/v1/StatusAccount/{id}`
 
 ### FOLLOW:
 
@@ -79,21 +79,21 @@ A API estará disponível em `http://localhost:44307`.
 `POST - /api/v1/Follow`
 
 2. Consultar follows:
-`GET - GetAll - api/v1/Follow`
-`GET - Puxar por quem segue - api/v1/Follow/Follower/{id}`
-`GET - Puxar por quem é seguido - api/v1/Follow/Following/{id}`
+`GET - GetAll - /api/v1/Follow`
+`GET - Puxar por quem segue - /api/v1/Follow/Follower/{id}`
+`GET - Puxar por quem é seguido - /api/v1/Follow/Following/{id}`
 
 3. Atualizar follow:
-`PUT - api/v1/Follow/{id}`
+`PUT - /api/v1/Follow/{id}`
 
 4. Delete de follow:
-`DELETE - api/v1/Follow/{id}`
+`DELETE - /api/v1/Follow/{id}`
 
 ### VISIBILITY:
 
 1. Consultar visibility (Visibilidade de publicações):
-`GET - GetAll - api/v1/Visibility`
-`GET - GetById - api/v1/Visibility/{id}`
+`GET - GetAll - /api/v1/Visibility`
+`GET - GetById - /api/v1/Visibility/{id}`
 
 
 ## Requisitos de Sistema
