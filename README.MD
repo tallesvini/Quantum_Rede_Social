@@ -39,7 +39,7 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) e 
 
     - No [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/), rode localmente seu projeto (seja ele via IIS ou HTTP)
 
-A API estará disponível em `http://localhost:44307`.
+A API estará disponível em `http://localhost:44307` e com o Swagger em `http://localhost:44307/swagger/index.html`
 
 ## Endpoints:
 
