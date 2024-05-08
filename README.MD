@@ -45,53 +45,53 @@ A API estará disponível em `http://localhost:44307`.
 
 ### USERS:
 
-#### 1. Criação de usuários:   
+1. Criação de usuários:   
 ##### POST - /api/v1/UserProfile
 
-#### 2. Consultas de usuários:
+2. Consultas de usuários:
 ##### GET - GetAll - api/v1/UserProfile
 ##### GET - GetById - api/v1/UserProfile/{id}
 
-#### 3. Atualizar usuário:
+3. Atualizar usuário:
 ##### PUT - api/v1/UserProfile/{id}
 
-#### 4. Delete de usuário:
+4. Delete de usuário:
 ##### DELETE - api/v1/UserProfile/{id}
 
 ### STATUS ACCOUNT:
 
-#### 1. Criação de status:   
+1. Criação de status:   
 ##### POST - /api/v1/StatusAccount
 
-#### 2. Consultas de status:
+2. Consultas de status:
 ##### GET - GetAll - api/v1/StatusAccount
 ##### GET - GetById - api/v1/StatusAccount/{id}
 
-#### 3. Atualizar status:
+3. Atualizar status:
 ##### PUT - api/v1/StatusAccount/{id}
 
-#### 4. Delete de status:
+4. Delete de status:
 ##### DELETE - api/v1/StatusAccount/{id}
 
 ### FOLLOW:
 
-#### 1. Criação de follow (Novo seguidor):   
+1. Criação de follow (Novo seguidor):   
 ##### POST - /api/v1/Follow
 
-#### 2. Consultar follows:
+2. Consultar follows:
 ##### GET - GetAll - api/v1/Follow
 ##### GET - Puxar por quem segue - api/v1/Follow/Follower/{id}
 ##### GET - Puxar por quem é seguido - api/v1/Follow/Following/{id}
 
-#### 3. Atualizar follow:
+3. Atualizar follow:
 ##### PUT - api/v1/Follow/{id}
 
-#### 4. Delete de follow:
+4. Delete de follow:
 ##### DELETE - api/v1/Follow/{id}
 
 ### VISIBILITY:
 
-#### 1. Consultar visibility (Visibilidade de publicações):
+1. Consultar visibility (Visibilidade de publicações):
 ##### GET - GetAll - api/v1/Visibility
 ##### GET - GetById - api/v1/Visibility/{id}
 
