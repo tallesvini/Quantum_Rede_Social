@@ -4,7 +4,7 @@ Este projeto está sendo desenvolvida em .NET Core e OracleSQL, projetada como u
 
 ## Configuração
 
-Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) instalado em sua máquina.
+Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) e o [SQL Oracle](https://www.oracle.com/br/database/sqldeveloper/) instalado em sua máquina.
 
 1. Clone este repositório:
 
@@ -18,31 +18,32 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) in
    cd nome-do-repositorio
    ```
 
-3. Abra o arquivo `appsettings.json` e configure as informações de conexão com o banco de dados Oracle:
+3. Abra o arquivo `appsettings.json` dentro do projeto `SocialQuantum.API` e configure as informações de conexão com o seu banco de dados Oracle:
 
    ```json
       "ConnectionStrings": {
-          "DefaultConnectionApi": "..."
+          "DefaultConnectionApi": "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));User Id=_YOUR_USER_DB_;Password=_YOUR_PASS_DB_;"
       },
    ```
 
 4. Execute as migrações para criar as tabelas no banco de dados:
 
-   ```
-   dotnet ef database update
-   ```
+    - Abra o `Console do Gerenciador de Pacotes`.
+    - No campo `Projeto padrão`, selecione o projeto `SocialQuantum.Infra.Data`.
+    - Por fim, execute o comando abaixo:
+        ```
+        dotnet ef database update
+        ```
 
 5. Inicie o servidor:
 
-   ```
-   dotnet run
-   ```
+    - No [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/), rode localmente seu projeto (seja ele via IIS ou HTTP)
 
-A API estará disponível em `http://localhost:5000`.
+A API estará disponível em `http://localhost:44307`.
 
 ## Requisitos de Sistema
 
-- .NET Core SDK 3.1 ou superior.
+- .NET Core SDK 6 ou superior.
 
 ## Como Contribuir
 
