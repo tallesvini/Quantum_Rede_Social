@@ -83,10 +83,7 @@ A API estará disponível em `http://localhost:44307`.
 `GET - Puxar por quem segue - /api/v1/Follow/Follower/{id}`
 `GET - Puxar por quem é seguido - /api/v1/Follow/Following/{id}`
 
-3. Atualizar follow:
-`PUT - /api/v1/Follow/{id}`
-
-4. Delete de follow:
+3. Delete de follow:
 `DELETE - /api/v1/Follow/{id}`
 
 ### VISIBILITY:
