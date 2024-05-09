@@ -45,51 +45,51 @@ A API estará disponível em `http://localhost:44307` e com o Swagger em `http:/
 
 ### USERS:
 
-1. Criação de usuários:   
+1. Criação de novo Usuários:   
 `POST - /api/v1/UserProfile`
 
-2. Consultas de usuários:
-`GET - GetAll - /api/v1/UserProfile`
+2. Consultas de Usuários:
+`GET - GetAll - /api/v1/UserProfile`   
 `GET - GetById - /api/v1/UserProfile/{id}`
 
-3. Atualizar usuário:
+3. Atualizar Usuário:
 `PUT - /api/v1/UserProfile/{id}`
 
-4. Delete de usuário:
+4. Deletar Usuário:
 `DELETE - /api/v1/UserProfile/{id}`
 
 ### STATUS ACCOUNT:
 
-1. Criação de status:   
+1. Criação de novo Status:   
 `POST - /api/v1/StatusAccount`
 
-2. Consultas de status:
-`GET - GetAll - /api/v1/StatusAccount`
+2. Consultas de Status:
+`GET - GetAll - /api/v1/StatusAccount`  
 `GET - GetById - /api/v1/StatusAccount/{id}`
 
-3. Atualizar status:
+3. Atualizar Status:
 `PUT - /api/v1/StatusAccount/{id}`
 
-4. Delete de status:
+4. Deletar Status:
 `DELETE - /api/v1/StatusAccount/{id}`
 
 ### FOLLOW:
 
-1. Criação de follow (Novo seguidor):   
+1. Criação de novo Follow (Novo seguidor):   
 `POST - /api/v1/Follow`
 
-2. Consultar follows:
-`GET - GetAll - /api/v1/Follow`
-`GET - Puxar por quem segue - /api/v1/Follow/Follower/{id}`
+2. Consultar Follows:
+`GET - GetAll - /api/v1/Follow`  
+`GET - Puxar por quem segue - /api/v1/Follow/Follower/{id}`  
 `GET - Puxar por quem é seguido - /api/v1/Follow/Following/{id}`
 
-3. Delete de follow:
+3. Deletar Follow:
 `DELETE - /api/v1/Follow/{id}`
 
 ### VISIBILITY:
 
-1. Consultar visibility (Visibilidade de publicações):
-`GET - GetAll - /api/v1/Visibility`
+1. Consultar Visibility (Visibilidade de publicações):
+`GET - GetAll - /api/v1/Visibility`  
 `GET - GetById - /api/v1/Visibility/{id}`
 
 
